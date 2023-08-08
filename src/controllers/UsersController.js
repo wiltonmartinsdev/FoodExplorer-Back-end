@@ -6,7 +6,7 @@ const { hash } = pkg;
 
 class UsersController {
 	async create(request, response) {
-		let { name, email, password} = request.body;
+		let { name, email, password } = request.body;
 
 		const checkingUsersExist = await knex("users").where({ email }).first();
 
@@ -19,7 +19,7 @@ class UsersController {
 		const hashedPassword = await hash(password, 8);
 		password = hashedPassword;
 
-		await knex("users").insert({ name, email, password});
+		await knex("users").insert({ name, email, password });
 
 		response.status(201).json("Usuário Cadastrado com Sucesso!");
 	}
