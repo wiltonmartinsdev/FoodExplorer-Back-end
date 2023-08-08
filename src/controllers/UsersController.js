@@ -1,15 +1,28 @@
-import AppError from "../Utils/AppError.js";
+import knex from "../database/knex/index.js";
+import AppError from "../utils/AppError.js";
+import "express-async-errors";
+import pkg from "bcryptjs";
+const { hash } = pkg;
 
-class UserController {
-	create(request, response) {
-		const { name, email, password } = request.body;
+class UsersController {
+	async create(request, response) {
+		let { name, email, password} = request.body;
 
-		if (!name) {
-			throw new AppError("O nome do usuário é obrigatório!");
+		const checkingUsersExist = await knex("users").where({ email }).first();
+
+		if (checkingUsersExist) {
+			throw new AppError(
+				"E-mail já está em uso! Tente outro endereço de email."
+			);
 		}
 
-		return response.status(201).json({ name, email, password });
+		const hashedPassword = await hash(password, 8);
+		password = hashedPassword;
+
+		await knex("users").insert({ name, email, password});
+
+		response.status(201).json("Usuário Cadastrado com Sucesso!");
 	}
 }
 
-export default UserController;
+export default UsersController;
