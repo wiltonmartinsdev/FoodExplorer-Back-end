@@ -1,5 +1,5 @@
 import "express-async-errors";
-import AppError from "./utils/AppError.js";
+import App_Error from "./utils/App_Error.js";
 import express from "express";
 import routes from "./routes/index.js";
 
@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(routes);
 
 app.use((error, request, response, next) => {
-	if (error instanceof AppError) {
+	if (error instanceof App_Error) {
 		return response.status(error.statusCode).json({
 			status: "Error do Cliente",
 			message: error.message,

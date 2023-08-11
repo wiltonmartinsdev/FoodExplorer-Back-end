@@ -1,4 +1,4 @@
-class AppError {
+class App_Error {
 	message;
 	statusCode;
 
@@ -8,4 +8,4 @@ class AppError {
 	}
 }
 
-export default AppError;
+export default App_Error;
