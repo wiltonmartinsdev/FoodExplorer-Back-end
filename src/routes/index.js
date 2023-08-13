@@ -1,10 +1,10 @@
 import Router from "express";
-import users_Routes from "./users_Routes.js";
-import dishes_Routes from "./dishes_Routes.js";
+import usersRoutes from "./usersRoutes.js";
+import dishesRoutes from "./dishesRoutes.js";
 
 const routes = Router();
 
-routes.use("/users", users_Routes);
-routes.use("/admin", dishes_Routes);
+routes.use("/users", usersRoutes);
+routes.use("/admin", dishesRoutes);
 
 export default routes;

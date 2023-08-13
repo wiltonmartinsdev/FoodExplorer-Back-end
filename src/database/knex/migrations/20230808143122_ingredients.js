@@ -1,13 +1,13 @@
 const up = (knex) =>
 	knex.schema.createTable("ingredients", (table) => {
-		table.increments("ID");
+		table.increments("Id");
 		table.text("Name").notNullable();
 		table
-			.integer("Dish_ID")
-			.references("ID")
+			.integer("DishId")
+			.references("Id")
 			.inTable("dishes")
 			.onDelete("CASCADE");
-		table.timestamp("Created_at").default(knex.fn.now());
+		table.timestamp("CreatedAt").default(knex.fn.now());
 	});
 
 const down = (knex) => knex.schema.dropTable("ingredients");
