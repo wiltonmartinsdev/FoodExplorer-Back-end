@@ -62,16 +62,16 @@ Autenticação:
 
 Para o Usuário:
 
-- Visualizar Pratos: O usuário pode visualizar a lista completa de pratos disponíveis no menu, incluindo nome, descrição, ingredientes, preço e imagem.
-- Marcar como Favorito: O usuário pode marcar seus pratos favoritos para fácil acesso posterior.
 - Buscar Pratos: O usuário pode buscar pratos tanto pelo nome quanto pelos ingredientes, para encontrar pratos específicos.
+- Visualizar Pratos: Ao clicar na imagem do prato o usuário será redirecionado para uma nova tela com informações mais detalhadas como nome, descrição, ingredientes, preço e imagem.
+- Marcar como Favorito: O usuário pode marcar seus pratos favoritos para fácil acesso posterior.
 
 <img src="https://github.com/wiltonmartinsdev/FoodExplorer-Front-end/blob/main/src/assets/userRoutes.gif?raw=true" />
 
 Para o Admin:
 
-- Criar Pratos: O admin tem a capacidade de criar novos pratos, inserindo informações como nome, descrição, ingredientes, categoria, preço e imagem.
 - Visualizar Pratos: O admin pode ver a lista completa de pratos, assim como os usuários.
+- Criar Pratos: O admin tem a capacidade de criar novos pratos, inserindo informações como nome, descrição, ingredientes, categoria, preço e imagem.
 - Editar Pratos: O admin pode editar as informações dos pratos existentes, como nome, descrição, ingredientes, categoria, preço e imagem.
 - Apagar Pratos: O admin pode remover pratos do menu, se necessário.
 - Fazer Upload de Imagens: O admin pode fazer upload de imagens para cada prato, tornando a apresentação visual mais atrativa.
