@@ -97,7 +97,5 @@ Para o Admin:
 
 - Durante a realização deste projeto, adquiri proficiência em uma série de novas tecnologias, incluindo React.js, Styled-Components, Node.js, Express.js, Cors, Axios, JWT, Sqlite e Knex.js. Aprender a criptografar senhas de usuário, validar e-mails e explorar outras nuances foram aspectos muito importantes nessa minha experiência.
 
-- O início deste projeto apresentou desafios na compreensão das interações entre Front-end e Back-end usando tecnologias como Cors, Axios e JWT. Além disso, dominar os conceitos de React, como props, componentes e Hooks, exigiu um esforço muito grande para compreendê-los. No Back-end, também o entendimento dos métodos HTTP, a conexão com bancos de dados e a implementação de um Query Builder como o Knex.js foram muito desafiadores, ou seja, foram muitos desafios e aprendizados ao longo do caminho.
-
 - Minha jornada de aprendizado foi moldada não apenas pela prática, mas também pela pesquisa em diversas fontes, incluindo o fórum do Explorer, Google, YouTube, Stack Overflow, MDN Web Docs e, até mesmo, minhas interações com o chatGPT. Rever as aulas e trabalhar não só neste projeto, mas também nos anteriores, permitiu a aplicação prática de todo o conhecimento acumulado ao longo do Explorer.
 
