@@ -22,8 +22,7 @@
 ## Pré-requisitos
 - Node.js instalado na máquina.
 - NPM (Node Package Manager) para instalar as dependências necessárias do projeto.
-- Esse repositório é o Back-end da aplicação e para o correto funcionamento, em ambiente local, é necessário executá-lo em conjunto com o repositório Front-end. Você pode acessar o repositório Front-end em: https://github.com/wiltonmartinsdev/FoodExplorer-Front-End
-
+- Esse repositório é o Back-end da aplicação e para o correto funcionamento, em ambiente local, é necessário executá-lo em conjunto com o repositório Front-end. Você pode acessar o repositório Front-end em: https://github.com/wiltonmartinsdev/FoodExplorer-Front-end
 
 ## Instalação
 - Clone o repositório: git clone git@github.com:wiltonmartinsdev/FoodExplorer-Back-End.git
