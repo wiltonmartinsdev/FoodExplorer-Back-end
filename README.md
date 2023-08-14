@@ -6,11 +6,11 @@
 
 
 ## Stacks utilizadas
-  **No Front-end:** `React.js`, `Styled-Component`
+  **No Front-end:** `React.js`, `Styled-Component`.
   - React.js: Uma biblioteca JavaScript para criar interfaces de usuário.
   - Styled-components: Uma biblioteca que permite escrever CSS em JavaScript para estilizar componentes React.
   
-  **E no Back-end:** `Node.js`, `Express.js`, `Cors`, `Axios`, `JWT`, `SQLite`, `Knex.js`
+  **E no Back-end:** `Node.js`, `Express.js`, `Cors`, `Axios`, `JWT`, `SQLite`, `Knex.js`.
 - Node.js: Um ambiente de tempo de execução JavaScript que permite executar código JavaScript fora do navegador.
 - Express: Um framework para Node.js que simplifica a criação de aplicativos da web e APIs.
 - Cors: Um middleware que adiciona cabeçalhos CORS (Cross-Origin Resource Sharing) às solicitações e respostas HTTP.
@@ -25,8 +25,8 @@
 - Esse repositório é o Back-end da aplicação e para o correto funcionamento, em ambiente local, é necessário executá-lo em conjunto com o repositório Front-end. Você pode acessar o repositório Front-end em: https://github.com/wiltonmartinsdev/FoodExplorer-Front-end
 
 ## Instalação
-- Clone o repositório: git clone git@github.com:wiltonmartinsdev/FoodExplorer-Back-end.git
-- Acesse o diretório do projeto: `cd FoodExplorer-Back-end`
+- Clone o repositório.
+- Acesse o diretório do projeto: `cd FoodExplorer-Back-end`.
 - Certifique-se de ter o Node.js e o NPM instalados em sua máquina e depois digite no terminal o comando abaixo para instalar todas as dependências necessárias do projeto.
 
         npm install
