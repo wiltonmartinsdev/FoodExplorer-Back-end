@@ -58,11 +58,15 @@ Autenticação:
 
 - Fazer Login: Admin e usuário poderão fazer login na aplicação para acessar as funcionalidades referentes a cada persona, que são descritas logo abaixo.
 
+<img src="https://github.com/wiltonmartinsdev/FoodExplorer-Front-end/blob/main/src/assets/authenticationRoutes.gif?raw=true" />
+
 Para o Usuário:
 
 - Visualizar Pratos: O usuário pode visualizar a lista completa de pratos disponíveis no menu, incluindo nome, descrição, preço e imagem.
 - Marcar como Favorito: O usuário pode marcar seus pratos favoritos para fácil acesso posterior.
 - Buscar Pratos: O usuário pode buscar pratos tanto pelo nome quanto pelos ingredientes, para encontrar pratos específicos.
+
+<img src="https://github.com/wiltonmartinsdev/FoodExplorer-Front-end/blob/main/src/assets/userRoutes.gif?raw=true" />
 
 Para o Admin:
 
@@ -72,6 +76,8 @@ Para o Admin:
 - Apagar Pratos: O admin pode remover pratos do menu, se necessário.
 - Fazer Upload de Imagens: O admin pode fazer upload de imagens para cada prato, tornando a apresentação visual mais atrativa.
 - OBSERVAÇÃO: Para acessar as funcionalidades do Admin, utilize as seguintes credencias: `Email: adminuser@foodexplorer.com` e `Senha: 123456`.
+
+<img src="https://github.com/wiltonmartinsdev/FoodExplorer-Front-end/blob/main/src/assets/adminRoutes.gif?raw=true" />
 
 
 ## Licença
