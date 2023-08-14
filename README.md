@@ -33,7 +33,7 @@
 
 
 ## Banco de Dados
-- O banco de dados SQLite já se encontra configurado, ao instalar as dependências do projeto, e não requer mais etapas de configuração.
+- O banco de dados SQLite já se encontra configurado ao instalar as dependências do projeto, e não requer mais etapas de configuração.
 
 
 ## Variáveis de Ambiente
