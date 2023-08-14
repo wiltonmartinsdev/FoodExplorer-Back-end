@@ -25,7 +25,7 @@
 - Esse repositório é o Back-end da aplicação e para o correto funcionamento, em ambiente local, é necessário executá-lo em conjunto com o repositório Front-end. Você pode acessar o repositório Front-end em: https://github.com/wiltonmartinsdev/FoodExplorer-Front-end
 
 ## Instalação
-- Clone o repositório: git clone git@github.com:wiltonmartinsdev/FoodExplorer-Back-End.git
+- Clone o repositório: git clone git@github.com:wiltonmartinsdev/FoodExplorer-Back-end.git
 - Acesse o diretório do projeto: `cd FoodExplorer-Back-End`
 - Com o Node.js e NPM instalado na máquina, quando executar o projeto pela primeira vez, precisará digitar no terminal o comando abaixo para instalar as dependências do projeto.
 
