@@ -62,7 +62,7 @@ Autenticação:
 
 Para o Usuário:
 
-- Visualizar Pratos: O usuário pode visualizar a lista completa de pratos disponíveis no menu, incluindo nome, descrição, preço e imagem.
+- Visualizar Pratos: O usuário pode visualizar a lista completa de pratos disponíveis no menu, incluindo nome, descrição, ingredientes, preço e imagem.
 - Marcar como Favorito: O usuário pode marcar seus pratos favoritos para fácil acesso posterior.
 - Buscar Pratos: O usuário pode buscar pratos tanto pelo nome quanto pelos ingredientes, para encontrar pratos específicos.
 
@@ -70,9 +70,9 @@ Para o Usuário:
 
 Para o Admin:
 
-- Criar Pratos: O admin tem a capacidade de criar novos pratos, inserindo informações como nome, descrição, categoria, preço e imagem.
+- Criar Pratos: O admin tem a capacidade de criar novos pratos, inserindo informações como nome, descrição, ingredientes, categoria, preço e imagem.
 - Visualizar Pratos: O admin pode ver a lista completa de pratos, assim como os usuários.
-- Editar Pratos: O admin pode editar as informações dos pratos existentes, como nome, descrição, categoria, preço e imagem.
+- Editar Pratos: O admin pode editar as informações dos pratos existentes, como nome, descrição, ingredientes, categoria, preço e imagem.
 - Apagar Pratos: O admin pode remover pratos do menu, se necessário.
 - Fazer Upload de Imagens: O admin pode fazer upload de imagens para cada prato, tornando a apresentação visual mais atrativa.
 - OBSERVAÇÃO: Para acessar as funcionalidades do Admin, utilize as seguintes credencias: `Email: adminuser@foodexplorer.com` e `Senha: 123456`.
