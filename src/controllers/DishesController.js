@@ -57,81 +57,6 @@ class DishesController {
 		}
 	}
 
-	async update(request, response) {
-		const { Name, Description, Category, Price, Ingredients } =
-			request.body;
-		const { Id } = request.params;
-
-		try {
-			await knex.transaction(async (trx) => {
-				const registeredDishes = await trx("dishes")
-					.where({ Id })
-					.first();
-
-				if (!registeredDishes) {
-					throw new CustomAppError(
-						"Nenhum prato foi encontrado no sistema. Por favor, tente novamente."
-					);
-				}
-
-				const dishName = await trx("dishes").where({ Name }).first();
-
-				if (dishName && dishName.Id !== registeredDishes.Id) {
-					throw new CustomAppError(
-						"Ops! Parece que esse prato já foi cadastrado em nosso sistema. Por favor, tente novamente com um nome diferente."
-					);
-				}
-
-				await trx("dishes").where({ Id }).update({
-					Name,
-					Description,
-					Category,
-					Price,
-					UpdatedAt: trx.fn.now(),
-				});
-
-				if (Ingredients) {
-					const registeredIngredients = await trx(
-						"ingredients"
-					).where({ DishId: Id });
-
-					const newIngredients = Ingredients.filter((Ingredient) => {
-						return !registeredIngredients.some(
-							(ingredientRegistered) => {
-								return ingredientRegistered.Name === Ingredient;
-							}
-						);
-					});
-
-					for (const ingredient of newIngredients) {
-						await trx("ingredients").where({ DishId: Id }).insert({
-							DishId: Id,
-							Name: ingredient,
-						});
-					}
-				}
-
-				return response.json(
-					"Ótima notícia! O prato foi atualizado com sucesso!"
-				);
-			});
-		} catch (error) {
-			if (error instanceof CustomAppError) {
-				return response.status(error.statusCode).json({
-					status: "Error do Cliente",
-					message: error.message,
-				});
-			}
-
-			console.error(error);
-			return response.status(500).json({
-				status: "Error do Servidor",
-				message:
-					"Ops! Desculpe, ocorreu um erro ao tentar atualizar o prato devido a algum problema no servidor. Por favor, tente novamente.",
-			});
-		}
-	}
-
 	async show(request, response) {
 		const { Id } = request.params;
 
@@ -237,6 +162,100 @@ class DishesController {
 				status: "Error do Servidor",
 				message:
 					"Ops! Desculpe, ocorreu um erro ao tentar mostrar as informações do prato devido a algum problema no servidor. Por favor, tente novamente.",
+			});
+		}
+	}
+
+	async update(request, response) {
+		const { Name, Description, Category, Price, Ingredients } =
+			request.body;
+		const { Id } = request.params;
+
+		try {
+			await knex.transaction(async (trx) => {
+				const registeredDishes = await trx("dishes")
+					.where({ Id })
+					.first();
+
+				if (!registeredDishes) {
+					throw new CustomAppError(
+						"Nenhum prato foi encontrado no sistema. Por favor, tente novamente."
+					);
+				}
+
+				const dishName = await trx("dishes").where({ Name }).first();
+
+				if (dishName && dishName.Id !== registeredDishes.Id) {
+					throw new CustomAppError(
+						"Ops! Parece que esse prato já foi cadastrado em nosso sistema. Por favor, tente novamente com um nome diferente."
+					);
+				}
+
+				await trx("dishes").where({ Id }).update({
+					Name,
+					Description,
+					Category,
+					Price,
+					UpdatedAt: trx.fn.now(),
+				});
+
+				if (Ingredients) {
+					const registeredIngredients = await trx(
+						"ingredients"
+					).where({ DishId: Id });
+
+					const newIngredients = Ingredients.filter((Ingredient) => {
+						return !registeredIngredients.some(
+							(ingredientRegistered) => {
+								return ingredientRegistered.Name === Ingredient;
+							}
+						);
+					});
+
+					for (const ingredient of newIngredients) {
+						await trx("ingredients").where({ DishId: Id }).insert({
+							DishId: Id,
+							Name: ingredient,
+						});
+					}
+				}
+
+				return response.json(
+					"Ótima notícia! O prato foi atualizado com sucesso!"
+				);
+			});
+		} catch (error) {
+			if (error instanceof CustomAppError) {
+				return response.status(error.statusCode).json({
+					status: "Error do Cliente",
+					message: error.message,
+				});
+			}
+
+			console.error(error);
+			return response.status(500).json({
+				status: "Error do Servidor",
+				message:
+					"Ops! Desculpe, ocorreu um erro ao tentar atualizar o prato devido a algum problema no servidor. Por favor, tente novamente.",
+			});
+		}
+	}
+
+	async delete(request, response) {
+		const { Id } = request.params;
+
+		try {
+			await knex.transaction(async (trx) => {
+				await trx("dishes").where({ Id }).delete();
+
+				return response.json("Prato deletado com sucesso do sistema!");
+			});
+		} catch (error) {
+			console.error(error);
+			return response.status(500).json({
+				status: "Error do Servidor",
+				message:
+					"Ops! Desculpe, ocorreu um erro ao tentar deletar as informações do prato devido a algum problema no servidor. Por favor, tente novamente.",
 			});
 		}
 	}
