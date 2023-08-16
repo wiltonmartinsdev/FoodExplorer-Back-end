@@ -85,13 +85,7 @@ Para o Admin:
 
 
 ## Status do Projeto
--   Conforme com o que foi proposto, pelos requisitos obrigatórios para desenvolver o projeto, o Back-end temporariamente não encontra-se finalizado! A aplicação esta pronta até a seguinte parte:
-
--   ...........
-
-E a parte que esta faltando implementar é a seguinte parte:
-
--   ................
+-   Conforme com o que foi proposto, pelos requisitos obrigatórios para desenvolver o projeto, o Back-end, temporariamente, não encontra-se finalizado! A aplicação esta implementada até a parte de cadastrado do usuário!
 
 
 ## Aprendizados
