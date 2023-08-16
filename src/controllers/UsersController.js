@@ -6,7 +6,7 @@ const { hash } = pkg;
 
 class UsersController {
 	async create(request, response) {
-		let { name, email, password } = request.body;
+		let { name, email, password, adminUser } = request.body;
 
 		try {
 			await knex.transaction(async (trx) => {
@@ -23,7 +23,7 @@ class UsersController {
 				const hashedPassword = await hash(password, 8);
 				password = hashedPassword;
 
-				await trx("users").insert({ name, email, password });
+				await trx("users").insert({ name, email, password, adminUser });
 
 				return response
 					.status(201)
