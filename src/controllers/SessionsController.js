@@ -4,8 +4,6 @@ import authConfig from "../configs/authConfig.js";
 import jwt from "jsonwebtoken";
 import pkg from "bcryptjs";
 const { compare } = pkg;
-// import pkg2 from "jsonwebtoken";
-// const { sign } = pkg2;
 
 class SessionsController {
 	async create(request, response) {
@@ -19,7 +17,7 @@ class SessionsController {
 
 				if (!registeredUser) {
 					throw new CustomAppError(
-						"Email e/ou senha incorreta!",
+						"Ops! Parece que o email e/ou senha estão incorretos. Por favor, tente novamente!",
 						401
 					);
 				}
@@ -30,7 +28,10 @@ class SessionsController {
 				);
 
 				if (!passwordMatched) {
-					throw new CustomAppError("Email e/ou senha incorreta", 401);
+					throw new CustomAppError(
+						"Ops! Parece que o email e/ou senha estão incorretos. Por favor, tente novamente!",
+						401
+					);
 				}
 
 				const { secret, expiresIn } = authConfig.jwt;
@@ -53,7 +54,7 @@ class SessionsController {
 			return response.status(500).json({
 				status: "Error do Servidor",
 				message:
-					"Ops! Desculpe, ocorreu um erro ao tentar atualizar o prato devido a algum problema no servidor. Por favor, tente novamente.",
+					"Ops! Desculpe, ocorreu um erro ao tentar entrar no sistema devido a algum problema no servidor. Por favor, tente novamente.",
 			});
 		}
 	}
