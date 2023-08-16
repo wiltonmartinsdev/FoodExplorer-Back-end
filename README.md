@@ -85,7 +85,7 @@ Para o Admin:
 
 
 ## Status do Projeto
--   Conforme com o que foi proposto, pelos requisitos obrigatórios para desenvolver o projeto, o Back-end, temporariamente, não encontra-se finalizado! A aplicação esta integrada até a parte de autenticação do usuário!
+-   Conforme com o que foi proposto, pelos requisitos obrigatórios para desenvolver o projeto, o Back-end, temporariamente, não encontra-se finalizado! A aplicação esta integrada, com o Front-end, até a parte de autenticação do usuário!
 
 
 ## Aprendizados
