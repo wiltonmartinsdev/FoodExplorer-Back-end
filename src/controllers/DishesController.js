@@ -4,13 +4,13 @@ import "express-async-errors";
 
 class DishesController {
 	async create(request, response) {
-		const { Name, Description, Category, Price, Ingredients } =
+		const { name, description, category, price, ingredients } =
 			request.body;
 
 		try {
 			await knex.transaction(async (trx) => {
 				const registeredDish = await trx("dishes")
-					.where({ Name })
+					.where({ name })
 					.first();
 
 				if (registeredDish) {
@@ -20,19 +20,23 @@ class DishesController {
 				}
 
 				const [DishId] = await trx("dishes").insert({
-					Name,
-					Description,
-					Category,
-					Price,
+					name,
+					description,
+					category,
+					price,
 				});
 
-				const registeringIngredients = Ingredients.map((Ingredient) => {
-					return { DishId, Name: Ingredient };
-				});
+				if (ingredients) {
+					const registeringIngredients = ingredients.map(
+						(ingredient) => {
+							return { DishId, Name: ingredient };
+						}
+					);
 
-				await trx("ingredients")
-					.where({ DishId })
-					.insert(registeringIngredients);
+					await trx("ingredients")
+						.where({ DishId })
+						.insert(registeringIngredients);
+				}
 
 				return response
 					.status(201)
@@ -167,7 +171,7 @@ class DishesController {
 	}
 
 	async update(request, response) {
-		const { Name, Description, Category, Price, Ingredients } =
+		const { name, description, category, price, ingredients } =
 			request.body;
 		const { Id } = request.params;
 
@@ -183,7 +187,7 @@ class DishesController {
 					);
 				}
 
-				const dishName = await trx("dishes").where({ Name }).first();
+				const dishName = await trx("dishes").where({ name }).first();
 
 				if (dishName && dishName.Id !== registeredDishes.Id) {
 					throw new CustomAppError(
@@ -192,19 +196,19 @@ class DishesController {
 				}
 
 				await trx("dishes").where({ Id }).update({
-					Name,
-					Description,
-					Category,
-					Price,
+					name,
+					description,
+					category,
+					price,
 					UpdatedAt: trx.fn.now(),
 				});
 
-				if (Ingredients) {
+				if (ingredients) {
 					const registeredIngredients = await trx(
 						"ingredients"
 					).where({ DishId: Id });
 
-					const newIngredients = Ingredients.filter((Ingredient) => {
+					const newIngredients = ingredients.filter((Ingredient) => {
 						return !registeredIngredients.some(
 							(ingredientRegistered) => {
 								return ingredientRegistered.Name === Ingredient;
