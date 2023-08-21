@@ -103,12 +103,6 @@ class DishesController {
 			await knex.transaction(async (trx) => {
 				let dishes;
 
-				if (!name && !ingredients) {
-					throw new CustomAppError(
-						"Ops! Parece que o campo está vazio. Por favor, digite o nome ou ingrediente do prato para realizar a pesquisa!"
-					);
-				}
-
 				if (ingredients) {
 					const ingredientsToCheck = ingredients
 						.split(",")
@@ -146,7 +140,7 @@ class DishesController {
 					);
 
 					return {
-						dish,
+						...dish,
 						Ingredients: dishWithFilteredIngredients,
 					};
 				});
