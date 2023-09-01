@@ -22,7 +22,7 @@ class DiskStorage {
 		}
 
 		await fs.promises.unlink(filePath);
-	}
+	} 
 }
 
 export default DiskStorage;

@@ -4,10 +4,10 @@ import "express-async-errors";
 
 class DishesController {
 	async create(request, response) {
-		const { name, description, category, price, ingredients } =
-			request.body;
-
 		try {
+			const { name, description, category, price, ingredients } =
+				request.body;
+
 			await knex.transaction(async (trx) => {
 				const registeredDish = await trx("dishes")
 					.where({ name })
@@ -40,9 +40,7 @@ class DishesController {
 
 				return response
 					.status(201)
-					.json(
-						"Ótima notícia! O prato foi cadastrado com sucesso no sistema!"
-					);
+					.json({DishId});
 			});
 		} catch (error) {
 			if (error instanceof CustomAppError) {
@@ -62,9 +60,9 @@ class DishesController {
 	}
 
 	async show(request, response) {
-		const { Id } = request.params;
-
 		try {
+			const { Id } = request.params;
+
 			await knex.transaction(async (trx) => {
 				const dishInformation = await trx("dishes")
 					.where({ Id })
@@ -97,17 +95,11 @@ class DishesController {
 	}
 
 	async index(request, response) {
-		let { name, ingredients } = request.query;
-
 		try {
+			let { name, ingredients } = request.query;
+
 			await knex.transaction(async (trx) => {
 				let dishes;
-
-				if (!name && !ingredients) {
-					throw new CustomAppError(
-						"Ops! Parece que o campo está vazio. Por favor, digite o nome ou ingrediente do prato para realizar a pesquisa!"
-					);
-				}
 
 				if (ingredients) {
 					const ingredientsToCheck = ingredients
@@ -146,7 +138,7 @@ class DishesController {
 					);
 
 					return {
-						dish,
+						...dish,
 						Ingredients: dishWithFilteredIngredients,
 					};
 				});
@@ -171,11 +163,12 @@ class DishesController {
 	}
 
 	async update(request, response) {
-		const { name, description, category, price, ingredients } =
-			request.body;
-		const { Id } = request.params;
-
 		try {
+			const { name, description, category, price, ingredients } =
+				request.body;
+
+			const { Id } = request.params;
+
 			await knex.transaction(async (trx) => {
 				const registeredDishes = await trx("dishes")
 					.where({ Id })
@@ -225,7 +218,7 @@ class DishesController {
 				}
 
 				return response.json(
-					"Ótima notícia! O prato foi atualizado com sucesso!"
+					"Ótima notícia! O prato foi atualizado com sucesso no sistema!"
 				);
 			});
 		} catch (error) {
@@ -246,9 +239,9 @@ class DishesController {
 	}
 
 	async delete(request, response) {
-		const { Id } = request.params;
-
 		try {
+			const { Id } = request.params;
+
 			await knex.transaction(async (trx) => {
 				await trx("dishes").where({ Id }).delete();
 

@@ -5,28 +5,35 @@ import DiskStorage from "../providers/DiskStorage.js";
 
 class DishImageController {
 	async update(request, response) {
-		const userId = request.user.Id;
+        try {
+            const {Id} = request.params;
 
-		const imageFilename = request.file.filename;
+            console.log(Id);
 
-		const diskStorage = new DiskStorage();
-
-		const dish = await knex("dishes").where({ Id: userId }).first();
-
-		if (!dish) {
-			throw new CustomAppError("Este prato não existe!", 401);
-		}
-
-		if (dish.Image) {
-			await diskStorage.deleteFile(dish.Image);
-		}
-
-		const filename = await diskStorage.saveFile(imageFilename);
-		dish.Image = filename;
-
-		await knex("dishes").where({ Id: userId }).update(dish);
-
-		return response.json(dish);
+            const imageFilename = request.file.filename;
+    
+            const diskStorage = new DiskStorage();
+    
+            const dish = await knex("dishes").where({ Id }).first();
+    
+            console.log(dish);
+    
+            if (!dish) {
+                throw new CustomAppError("Este prato não existe!", 401);
+            }
+    
+            if (dish.Image) {
+                await diskStorage.deleteFile(dish.Image);
+            }
+    
+            const filename = await diskStorage.saveFile(imageFilename);
+            dish.Image = filename;
+    
+            await knex("dishes").where({ Id }).update(dish);
+    
+            return response.json(dish);
+        } catch (error) {
+            throw new CustomAppError("Ops! Infelizmente, não conseguimos atualizar a imagem desta vez. Por favor, tente novamente. ", 400)        }
 	}
 }
 
