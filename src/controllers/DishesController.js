@@ -15,7 +15,7 @@ class DishesController {
 
 				if (registeredDish) {
 					throw new CustomAppError(
-						"Ops! Parece que esse prato já foi cadastrado no sistema. Por favor, tente novamente com um nome diferente."
+						"Ops! Parece que o Prato ou Sobremesa ou Bebida já foi cadastrado(a) no sistema. Por favor, tente novamente com um nome diferente."
 					);
 				}
 
@@ -38,9 +38,7 @@ class DishesController {
 						.insert(registeringIngredients);
 				}
 
-				return response
-					.status(201)
-					.json({DishId});
+				return response.status(201).json({ DishId });
 			});
 		} catch (error) {
 			if (error instanceof CustomAppError) {
@@ -96,12 +94,12 @@ class DishesController {
 
 	async index(request, response) {
 		try {
-			let { name, ingredients } = request.query;
+			const { name, ingredients } = request.query;
 
 			await knex.transaction(async (trx) => {
-				let dishes;
+				let dishes = await trx("dishes").whereLike("Name", `%${name}%`);
 
-				if (ingredients) {
+				if (dishes.length === 0) {
 					const ingredientsToCheck = ingredients
 						.split(",")
 						.map((ingredient) => {
@@ -115,17 +113,12 @@ class DishesController {
 							"dishes.Description",
 							"dishes.Category",
 							"dishes.Price",
+							"dishes.Image",
 						])
 						.whereIn("ingredients.Name", ingredientsToCheck)
-						.orWhere("ingredients.Name", "like", `%${ingredients}%`)
-						.orderBy("dishes.Name")
+						.orWhereLike("ingredients.Name", `%${ingredients}`)
+						.orderBy("ingredients.Name")
 						.innerJoin("dishes", "dishes.Id", "ingredients.DishId");
-				} else {
-					dishes = await trx("dishes").where(
-						"Name",
-						"like",
-						`%${name}%`
-					);
 				}
 
 				const dishIngredients = await trx("ingredients");

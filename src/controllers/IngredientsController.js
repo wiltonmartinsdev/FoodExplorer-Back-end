@@ -7,11 +7,7 @@ class IngredientsController {
 
 		try {
 			await knex.transaction(async (trx) => {
-				const ingredientsData = await trx("ingredients")
-					.where({ Id })
-					.delete();
-
-				console.log(ingredientsData);
+				await trx("ingredients").where({ Id }).delete();
 
 				return response.json(
 					"Ingrediente deletado com sucesso do sistema!"
