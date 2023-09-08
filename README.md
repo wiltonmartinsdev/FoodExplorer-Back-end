@@ -1,4 +1,4 @@
-# Food Explorer
+<h1 align="center"> Food Explorer </h1>
 
 <p align="center">
   <a href="#usedStacks">Stacks utilizadas</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
