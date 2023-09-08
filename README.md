@@ -1,11 +1,24 @@
 # Food Explorer
 
+<p align="center">
+  <a href="#usedStacks">Stacks utilizadas</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#prerequisite">Pré-requisitos</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#installation">Instalação</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#database">Banco de Dados</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#environmentVariables">Variáveis de Ambiente</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#applicationExecution">Execução da Aplicação</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#functionalities">Funcionalidades</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#license">Licença</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#projectStatus">Status do Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#learnings">Aprendizados</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+</p>
+
 - Este projeto consiste em desenvolver um menu interativo de ponta a ponta, ou seja, do Front-End ao Back-End onde terá duas personas que serão o Admin e Usuário.
 
 - Projeto Final proposto pelo programa de formação [Explorer](https://www.rocketseat.com.br/explorer) da [RocketSeat](https://www.rocketseat.com.br/).
 
 
-## Stacks utilizadas
+<h2 id="usedStacks"> Stacks utilizadas </h2>
   **No Front-end:** `React.js`, `Styled-Component`.
   - React.js: Uma biblioteca JavaScript para criar interfaces de usuário.
   - Styled-components: Uma biblioteca que permite escrever CSS em JavaScript para estilizar componentes React.
@@ -19,12 +32,13 @@
 - SQLite e Knex.js: Um banco de dados SQL leve e uma biblioteca query builder para Node.js.
 
 
-## Pré-requisitos
+<h2 id="prerequisite"> Pré-requisitos </h2> 
 - Node.js instalado na máquina.
 - NPM (Node Package Manager) para instalar as dependências necessárias do projeto.
 - Esse repositório é o Back-end da aplicação e para o correto funcionamento, em ambiente local, é necessário executá-lo em conjunto com o repositório Front-end. Você pode acessar o repositório Front-end em: https://github.com/wiltonmartinsdev/FoodExplorer-Front-end
 
-## Instalação
+
+<h2 id="installation"> Instalação </h2>
 - Clone o repositório.
 - Acesse o diretório do projeto: `cd FoodExplorer-Back-end`.
 - Certifique-se de ter o Node.js e o NPM instalados em sua máquina e depois digite no terminal o comando abaixo para instalar todas as dependências necessárias do projeto.
@@ -32,15 +46,15 @@
         npm install
 
 
-## Banco de Dados
+<h2 id="database"> Banco de Dados </h2>
 - O banco de dados SQLite já se encontra configurado ao instalar as dependências do projeto, e não requer mais etapas de configuração.
 
 
-## Variáveis de Ambiente
+<h2 id="environmentVariables"> Variáveis de Ambiente </h2>
 - Renomeie o arquivo .env.example para .env no diretório back-end e configure as variáveis de ambiente necessárias.
 
 
-## Execução da Aplicação
+<h2 id="applicationExecution"> Execução da Aplicação </h2>
 - Após instalar todas as dependências necessárias do projeto, agora poderá executá-lo com o seguinte passo:
 
 - Para executar a aplicação digite no terminal o comando abaixo:
@@ -50,7 +64,7 @@
         Após esse comando, o servidor irá ser inicializado e aparecerá a mensagem: "Server is running on Port: 3333" informando que o servidor esta sendo executado na porta 3333. A partir, desta etapa podemos testar a aplicação, lembrando que o Front-end tem que estar sendo executado em conjunto com o Back-end, para o correto funcionamento da aplicação.
 
 
-## Funcionalidades
+<h2 id="functionalities"> Funcionalidades </h2>
 
 Autenticação:
 
@@ -80,15 +94,15 @@ Para o Admin:
 <img src="https://github.com/wiltonmartinsdev/FoodExplorer-Front-end/blob/main/src/assets/adminRoutes.gif?raw=true" />
 
 
-## Licença
+<h2 id="license"> Licença </h2>
 ![GitHub](https://img.shields.io/github/license/wiltonmartinsdev/Movie-Notes)
 
 
-## Status do Projeto
+<h2 id="projectStatus"> Status do Projeto </h2>
 -   Conforme com o que foi proposto, pelos requisitos obrigatórios para desenvolver o projeto, o Back-end, temporariamente, não encontra-se finalizado! A aplicação esta integrada, com o Front-end, até a parte de autenticação do usuário e cadastro de um novo prato!
 
 
-## Aprendizados
+<h2 id="learnings"> Aprendizados </h2>
 - A cada novo projeto proposto no Explorer sempre há novos aprendizados e desafios, focados em nos levar a pensar fora da caixa e com isso sempre aprimorando cada vez mais o meu conhecimento adquirido em desenvolvimento Web FullStack.
 
 - Foram inúmeras horas de dedicação intensa, envolvendo estudos e práticas. Renunciei a muitas coisas para embarcar nesse processo de aprendizagem pelo Explorer, enfrentando inúmeras dificuldades ao longo do caminho. Embora eu esteja ciente de que a jornada ainda é longa e o aprendizado é contínuo, é extremamente gratificante olhar para trás e perceber todas as adversidades superadas durante o desenvolvimento deste projeto. Ver que sou capaz de criar uma aplicação completa, desde o Front-end até o Back-end, é um testemunho tangível de todo o progresso alcançado.
