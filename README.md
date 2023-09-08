@@ -56,7 +56,7 @@
 
 <h2 id="environmentVariables"> Variáveis de Ambiente </h2>
 
-- Renomeie o arquivo .env.example para .env no diretório back-end e configure as variáveis de ambiente necessárias.
+- Renomeie o arquivo .env.example para .env no diretório back-end e configure as variáveis AUTH_SECRET e PORT para o correto funcionamento da aplicação.
 
 
 <h2 id="applicationExecution"> Execução da Aplicação </h2>
@@ -108,7 +108,7 @@ Para o Admin:
 
 <h2 id="projectStatus"> Status do Projeto </h2>
 
--   Conforme com o que foi proposto, pelos requisitos obrigatórios para desenvolver o projeto, o Back-end, temporariamente, não encontra-se finalizado! A aplicação esta integrada, com o Front-end, até a parte de autenticação do usuário e cadastro de um novo prato!
+- Conforme com o que foi proposto, pelos requisitos obrigatórios para desenvolver o projeto, o Back-end encontra-se finalizado.
 
 
 <h2 id="learnings"> Aprendizados </h2>
