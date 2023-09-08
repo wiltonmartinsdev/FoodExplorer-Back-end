@@ -1,4 +1,5 @@
-<h1 align="center"> Food Explorer </h1>
+
+<h1 align="center"> <img src="https://raw.githubusercontent.com/wiltonmartinsdev/FoodExplorer-Front-end/1b71719f4470b524b48d83db6a86c084c658f796/src/assets/polygon.svg"/> Food Explorer </h1>
 
 <p align="center">
   <a href="#usedStacks">Stacks utilizadas</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
