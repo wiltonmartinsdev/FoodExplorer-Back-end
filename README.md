@@ -33,13 +33,15 @@
 - SQLite e Knex.js: Um banco de dados SQL leve e uma biblioteca query builder para Node.js.
 
 
-<h2 id="prerequisite"> Pré-requisitos </h2> 
+<h2 id="prerequisite"> Pré-requisitos </h2>
+
 - Node.js instalado na máquina.
 - NPM (Node Package Manager) para instalar as dependências necessárias do projeto.
 - Esse repositório é o Back-end da aplicação e para o correto funcionamento, em ambiente local, é necessário executá-lo em conjunto com o repositório Front-end. Você pode acessar o repositório Front-end em: https://github.com/wiltonmartinsdev/FoodExplorer-Front-end
 
 
 <h2 id="installation"> Instalação </h2>
+
 - Clone o repositório.
 - Acesse o diretório do projeto: `cd FoodExplorer-Back-end`.
 - Certifique-se de ter o Node.js e o NPM instalados em sua máquina e depois digite no terminal o comando abaixo para instalar todas as dependências necessárias do projeto.
@@ -48,14 +50,17 @@
 
 
 <h2 id="database"> Banco de Dados </h2>
+
 - O banco de dados SQLite já se encontra configurado ao instalar as dependências do projeto, e não requer mais etapas de configuração.
 
 
 <h2 id="environmentVariables"> Variáveis de Ambiente </h2>
+
 - Renomeie o arquivo .env.example para .env no diretório back-end e configure as variáveis de ambiente necessárias.
 
 
 <h2 id="applicationExecution"> Execução da Aplicação </h2>
+
 - Após instalar todas as dependências necessárias do projeto, agora poderá executá-lo com o seguinte passo:
 
 - Para executar a aplicação digite no terminal o comando abaixo:
@@ -102,10 +107,12 @@ Para o Admin:
 
 
 <h2 id="projectStatus"> Status do Projeto </h2>
+
 -   Conforme com o que foi proposto, pelos requisitos obrigatórios para desenvolver o projeto, o Back-end, temporariamente, não encontra-se finalizado! A aplicação esta integrada, com o Front-end, até a parte de autenticação do usuário e cadastro de um novo prato!
 
 
 <h2 id="learnings"> Aprendizados </h2>
+
 - A cada novo projeto proposto no Explorer sempre há novos aprendizados e desafios, focados em nos levar a pensar fora da caixa e com isso sempre aprimorando cada vez mais o meu conhecimento adquirido em desenvolvimento Web FullStack.
 
 - Foram inúmeras horas de dedicação intensa, envolvendo estudos e práticas. Renunciei a muitas coisas para embarcar nesse processo de aprendizagem pelo Explorer, enfrentando inúmeras dificuldades ao longo do caminho. Embora eu esteja ciente de que a jornada ainda é longa e o aprendizado é contínuo, é extremamente gratificante olhar para trás e perceber todas as adversidades superadas durante o desenvolvimento deste projeto. Ver que sou capaz de criar uma aplicação completa, desde o Front-end até o Back-end, é um testemunho tangível de todo o progresso alcançado.
