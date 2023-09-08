@@ -1,4 +1,3 @@
-
 <h1 align="center"> <img src="https://raw.githubusercontent.com/wiltonmartinsdev/FoodExplorer-Front-end/1b71719f4470b524b48d83db6a86c084c658f796/src/assets/polygon.svg"/> Food Explorer </h1>
 
 <p align="center">
@@ -20,11 +19,12 @@
 
 
 <h2 id="usedStacks"> Stacks utilizadas </h2>
-  **No Front-end:** `React.js`, `Styled-Component`.
-  - React.js: Uma biblioteca JavaScript para criar interfaces de usuário.
-  - Styled-components: Uma biblioteca que permite escrever CSS em JavaScript para estilizar componentes React.
+
+**No Front-end:** `React.js`, `Styled-Component`.
+- React.js: Uma biblioteca JavaScript para criar interfaces de usuário.
+- Styled-components: Uma biblioteca que permite escrever CSS em JavaScript para estilizar componentes React.
   
-  **E no Back-end:** `Node.js`, `Express.js`, `Cors`, `Axios`, `JWT`, `SQLite`, `Knex.js`.
+**E no Back-end:** `Node.js`, `Express.js`, `Cors`, `Axios`, `JWT`, `SQLite`, `Knex.js`.
 - Node.js: Um ambiente de tempo de execução JavaScript que permite executar código JavaScript fora do navegador.
 - Express: Um framework para Node.js que simplifica a criação de aplicativos da web e APIs.
 - Cors: Um middleware que adiciona cabeçalhos CORS (Cross-Origin Resource Sharing) às solicitações e respostas HTTP.
