@@ -96,7 +96,9 @@ Para o Admin:
 
 
 <h2 id="license"> Licença </h2>
-![GitHub](https://img.shields.io/github/license/wiltonmartinsdev/Movie-Notes)
+<p>
+  <img alt="License" src="https://img.shields.io/github/license/wiltonmartinsdev/FoodExplorer-Back-end">
+</p>
 
 
 <h2 id="projectStatus"> Status do Projeto </h2>
