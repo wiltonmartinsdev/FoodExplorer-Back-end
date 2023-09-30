@@ -61,9 +61,13 @@
 
 <h2 id="applicationExecution"> Execução da Aplicação </h2>
 
-- Após instalar todas as dependências necessárias do projeto, agora poderá executá-lo com o seguinte passo:
+- Após instalar todas as dependências necessárias do projeto, agora poderá executá-lo com os seguintes passos:
 
-- Para executar a aplicação digite no terminal o comando abaixo:
+- Primeiro: Para executar as migrates do banco digite no terminal o comando abaixo:
+
+        npm run migrate
+
+- Segundo: Para executar a aplicação digite no terminal o comando abaixo:
 
         npm run dev
         
